@@ -13,4 +13,4 @@ requirements:
   run:
     - 08-id-iss-analysis
     - lightflow
-    - pykafka
+    - kafka-python
