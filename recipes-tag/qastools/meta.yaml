@@ -9,7 +9,7 @@ source:
   git_rev: v{{ version }}
 
 build:
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
   skip: True  # [py2k]
 
@@ -30,6 +30,44 @@ requirements:
 test:
   imports:
     - isstools
+    - isstools.batch
+    - isstools.batch.batch
+    - isstools.batch.table_batch
+    - isstools.conversions.xray
+    - isstools.dialogs
+    - isstools.dialogs.BasicDialogs
+    - isstools.dialogs.MoveMotorDialog
+    - isstools.dialogs.Prepare_BL_Dialog
+    - isstools.dialogs.UpdateAngleOffset
+    - isstools.dialogs.UpdatePiezoDialog
+    - isstools.dialogs.UpdateUserDialog
+    - isstools.elements
+    - isstools.elements.EmittingStream
+    - isstools.elements.elements
+    - isstools.elements.figure_upate
+    - isstools.pid
+    - isstools.pid.PID
+    - isstools.trajectory
+    - isstools.trajectory.trajectory
+    - isstools.widgets
+    - isstools.widgets.widget_batch_mode
+    - isstools.widgets.widget_beamline_setup
+    - isstools.widgets.widget_beamline_status
+    - isstools.widgets.widget_energy_selector
+    - isstools.widgets.widget_general_info
+    - isstools.widgets.widget_processing
+    - isstools.widgets.widget_run
+    - isstools.widgets.widget_sdd_manager
+    - isstools.widgets.widget_trajectory_manager
+    - isstools.xasdata
+    - isstools.xasdata.xasdata
+    - isstools.xasproject
+    - isstools.xasproject.xasproject
+    - isstools.xiaparser
+    - isstools.xiaparser.xiaparser
+    - isstools.xlive
+    - isstools.xview
+    - isstools.xview.trash
 
 about:
   home: https://github.com/NSLS-II-QAS/isstools 
