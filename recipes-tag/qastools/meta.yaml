@@ -18,6 +18,7 @@ requirements:
     - python
     - setuptools
   run:
+    - bluesky
     - matplotlib
     - netcdf4
     - numpy
@@ -67,7 +68,6 @@ test:
     - isstools.xiaparser.xiaparser
     - isstools.xlive
     - isstools.xview
-    - isstools.xview.trash
 
 about:
   home: https://github.com/NSLS-II-QAS/isstools 
