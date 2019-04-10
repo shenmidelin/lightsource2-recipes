@@ -21,6 +21,7 @@ requirements:
     - bluesky
     - matplotlib
     - netcdf4
+    - hdf5 =1.10.2
     - numpy
     - pyqt >=5
     - pysmbc
@@ -45,7 +46,7 @@ test:
     - isstools.elements
     - isstools.elements.EmittingStream
     - isstools.elements.elements
-    - isstools.elements.figure_upate
+    - isstools.elements.figure_update
     - isstools.pid
     - isstools.pid.PID
     - isstools.trajectory
