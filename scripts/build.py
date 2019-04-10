@@ -36,7 +36,7 @@ import shutil
 from conda_build.metadata import MetaData
 from conda_build.variants import get_package_variants
 from conda_build.render import distribute_variants
-from conda_build.build import build as CondaBuild
+from conda_build.api import build as CondaBuild
 from conda_build.config import get_or_merge_config
 try:
     from conda_build.api import get_output_file_paths
@@ -507,7 +507,7 @@ def run_build(metas, username, token=None, upload=True, allow_failures=False):
     """
     if token is None:
         token = get_binstar_token()
-    metas_name_order = build_dependency_graph(metas)
+    metas_name_order = list(build_dependency_graph(metas))
     # pdb.set_trace()
     print('dependency_graph=%s' % metas_name_order)
     # metas_name_order = resolve_dependencies(dependency_graph)
@@ -537,7 +537,7 @@ def run_build(metas, username, token=None, upload=True, allow_failures=False):
         try:
             stats = {} # statistics for conda build internal; not needed
             # at this point meta should know the pinned numpy version
-            CondaBuild(meta, stats)
+            CondaBuild(meta, stats=stats)
         except Exception as e:
             build_or_test_failed.append(build_name)
             logger.error(e)
