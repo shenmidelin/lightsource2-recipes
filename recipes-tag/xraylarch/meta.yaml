@@ -9,7 +9,7 @@ source:
     git_rev: {{ version }}
 
 build:
-    number: 2
+    number: 3
     script: python setup.py install  # --single-version-externally-managed --record=record.txt
     skip: True  # [py2k]
 
@@ -29,7 +29,6 @@ requirements:
         - sqlalchemy >=0.9
         - termcolor
     run:
-        - python
         - asteval >=0.9.12
         - h5py >=2.2
         - lmfit >=0.9.9
@@ -38,11 +37,13 @@ requirements:
         - peakutils >=1.0.0
         - pillow >=3.4
         - psutil
+        - python
         - requests >=2.1
         - scipy >=0.17
         - six >=1.10
         - sqlalchemy >=0.9
         - termcolor
+        - wxpython
 
 test:
     imports:
