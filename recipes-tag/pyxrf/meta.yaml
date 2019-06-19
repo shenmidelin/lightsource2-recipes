@@ -22,13 +22,11 @@ requirements:
 
   run:
     - atom
-    - cloudpickle
-    - dask-core >=1.2.0
     - enaml >=0.10.2
     - h5py
     - ipywidgets
     - jupyter
-    - lmfit 0.8.3
+    - lmfit ==0.8.3
     - matplotlib
     - numpy
     - pandas
