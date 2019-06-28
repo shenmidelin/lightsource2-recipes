@@ -17,8 +17,8 @@ requirements:
   build:
     - cmake
     - openmpi
-    - {{ compiler('fortran') }}
     - {{ compiler('c') }}
+    - {{ compiler('fortran') }}
   host:
     - libopenblas
 
