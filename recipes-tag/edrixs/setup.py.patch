@@ -1,0 +1,14 @@
+diff --git a/setup.py b/setup.py
+index 577f59f..81eb9ed 100644
+--- a/setup.py
++++ b/setup.py
+@@ -36,7 +36,8 @@ with open(path.join(here, 'requirements.txt')) as requirements_file:
+ 
+ # Python interface to call fortran subroutines
+ ext_fortran = Extension(name='edrixs.fedrixs',
+-                        sources=['src/pyapi.f90'])
++                        sources=['src/pyapi.f90'],
++                        extra_link_args=['-nostartfiles'])
+ 
+ setup(
+     name='edrixs',
