@@ -1,19 +1,23 @@
 {% set name = "edrixs" %}
-{% set version = "0.0.3" %}
-{% set file_ext = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash_value = "6ee3655d5c72b51d032f63a75b7c497a0df8f7064a9d4a194bcbfd89450ee79f" %}
+{% set version = "0.0.4" %}
+#{% set file_ext = "tar.gz" %}
+#{% set hash_type = "sha256" %}
+#{% set hash_value = "6ee3655d5c72b51d032f63a75b7c497a0df8f7064a9d4a194bcbfd89450ee79f" %}
 
 package:
   name: '{{ name|lower }}'
   version: '{{ version }}'
 
+#source:
+#  git_url: https://github.com/NSLS-II/edrixs
+#  git_rev: v{{ version }}
+#  '{{ hash_type }}': '{{ hash_value }}'
+#  patches:
+#    - setup.py.patch
+#
 source:
-  git_url: https://github.com/NSLS-II/edrixs
-  git_rev: v{{ version }}
-  '{{ hash_type }}': '{{ hash_value }}'
-  patches:
-    - setup.py.patch
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 4d2f0757406dd01197925586db6a9363e2f3945f208fae5dc98e947139d8df9e
 
 build:
   number: 0
